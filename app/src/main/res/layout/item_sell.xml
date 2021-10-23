@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="product"
+            type="com.example.connectfarmapplication.models.ProductResponse" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="10dp">
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <ImageView
+               android:layout_width="150dp"
+               android:layout_height="150dp"
+               android:adjustViewBounds="true"
+               setThumbnail="@{product.image}"/>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_marginStart="5dp"
+               android:layout_marginTop="15dp">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="16sp"
+                   android:textStyle="bold"
+                   android:textColor="@color/black"
+                   android:text="@{product.name}"
+                   />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/black"
+                   android:text="@{product.user_name}"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@{product.address}"
+                   android:textColor="@color/black" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@{product.phone_number}"
+                   android:textColor="@color/black" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@{product.date}"
+                   android:textColor="@color/black" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:text="@{product.hexta}"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/black" />
+
+           </LinearLayout>
+       </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/silver" />
+    </LinearLayout>
+
+</layout>
